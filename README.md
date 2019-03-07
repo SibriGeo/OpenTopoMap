@@ -1,14 +1,15 @@
 OpenTopoMap
 ===========
-OpenTopoMap is a topographic map out of data from OpenStreetMap and SRTM. If you are interested in building your own OpenTopoMap, see the beginner's guides for [a tile server](mapnik/README.md) and for [Garmin files](garmin/README.md).
+
+OpenTopoMap - проект по созданию топографических карт с использованием данных OpenStreetMap и SRTM. Если вы хотите настроить свой сервер OpenTopoMap или самостоятельно создать карту для Garmin обратитесь к руководствам по созданию [сервера тайлов](mapnik/README.md) или [карт Garmin](garmin/README.md).
 
 ### Mapnik
-The main OpenTopoMap is a online rendered raster map. It can be used with the web interface on https://opentopomap.org, which gives you nice features like a search function or loading your gpx tracks. Futhermore, OpenTopoMap can be included into other applications. See https://opentopomap.org/about#verwendung for information on usage. The license of the online map is CC-BY-SA.
+Основной составляющей проекта OpenTopoMap является растровая онлайн карта. Веб-интерфейс карты расположен по адресу https://opentopomap.org и помимо отображения карты предоставляет ряд полезных возможностей, таких как поиск или возможность загрузки ваших gpx треков. Вы можете использовать OpenTopoMap в других приложениях. Подробности по использованию карт в других приложениях описаны на странице https://opentopomap.org/about#verwendung. Онлайн-карта предоставляется по лицензии CC-BY-SA.
 
-The online renderer is based on Mapnik. All necessary files are available to build your own OpenTopoMap server.
+Для генерации тайлов онлайн карта использует Mapnik. Доступны все необходимые файлы для создания собственного сервера OpenTopoMap.
 
 ### Garmin
-Since summer 2014 there is a Garmin edition of the OpenTopoMap. They can be downloaded from http://garmin.opentopomap.org. The license of the Garmin maps is CC-BY-NC-SA and therefore reselling is not allowed. Here are some screenshots:
+Начиная с лета 2014 OpenTopoMap предоставляет карты Garmin. Их можно загрузить по ссылке http://garmin.opentopomap.org. Данные карты имеют лицензию CC-BY-NC-SA, которая не разрешает распространять их на коммерческой основе. Ниже представлены несколько скриншотов данных карт:
 
 ![screenshot1](https://raw.githubusercontent.com/der-stefan/OpenTopoMap/master/garmin/screenshots/screenshot1.png)
 ![screenshot2](https://raw.githubusercontent.com/der-stefan/OpenTopoMap/master/garmin/screenshots/screenshot2.png)
