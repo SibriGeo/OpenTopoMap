@@ -107,6 +107,8 @@ node,way	denotation	text		polygon
 node,way   direction    text         linear
 node,way   disused      text         linear
 node       ele          text         linear
+node,way   rtsa_scale   text         linear
+node,way   mountain_pass   text         linear
 node,way   embankment   text         linear
 node,way   fee			text		polygon
 node,way   fenced		text		polygon
