@@ -256,3 +256,10 @@ node,way    3dshapes:ggmodelk       text    delete
 node,way    AND_nosr_r              text    delete
 node,way    import                  text    delete
 node,way    it:fvg:*                text    delete
+
+#metadata tags, use --extra-attributes option for osm2pgsql
+
+node,way   osm_user        text             linear
+node,way   osm_timestamp   timestamptz(0)   linear
+node,way   osm_changeset   integer          linear
+node,way   osm_osm_version integer          linear
