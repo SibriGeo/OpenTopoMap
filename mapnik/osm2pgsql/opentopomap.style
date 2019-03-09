@@ -132,6 +132,9 @@ node,way	memorial:type	text	polygon
 node,way   military     text         polygon
 node,way	motorboat	text		polygon
 node,way   motorcar     text         linear
+#TODO реализовать вывод в зависимости от тега, который заполнен (в порядке убывания)
+node,way   name:ru      text         linear
+node,way   name:en      text         linear
 node,way   name         text         linear
 node,way   natural      text         polygon  # natural=coastline tags are discarded by a hard coded rule in osm2pgsql
 node,way   office       text         polygon
