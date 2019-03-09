@@ -123,13 +123,13 @@
 		&maxscale_zoom12;
 		&minscale_zoom15;
 		<Filter>([natural] = 'spring')</Filter>
-		<PointSymbolizer file="symbols-otm/spring.png"/>
+		<PointSymbolizer file="symbols-otm/spring_genshtab.png"/>
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
 		&minscale_zoom17;
 		<Filter>([natural] = 'spring')</Filter>
-		<PointSymbolizer file="symbols-otm/spring_z15.png"/>
+		<PointSymbolizer file="symbols-otm/spring_genshtab.png"/>
 		<TextSymbolizer fontset-name="sans-oblique" size="10" fill="#2020ff" margin="1" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" placement="point" dy="8" wrap-width="100" wrap-before="true">[name]</TextSymbolizer>
 	</Rule>
 
