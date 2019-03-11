@@ -27,6 +27,7 @@
 	<!ENTITY tunnels-casing SYSTEM "styles-otm/tunnels-casing.xml">
 	<!ENTITY tunnels-fill SYSTEM "styles-otm/tunnels-fill.xml">
 	<!ENTITY tunnels-middle SYSTEM "styles-otm/tunnels-middle.xml">
+	<!ENTITY ridges SYSTEM "styles-otm/ridges.xml">
 	<!ENTITY cliffs SYSTEM "styles-otm/cliffs.xml">
 	<!ENTITY buildings SYSTEM "styles-otm/buildings.xml">
 	<!ENTITY areas SYSTEM "styles-otm/areas.xml">
@@ -59,6 +60,7 @@
 	<!ENTITY aerialways SYSTEM "styles-otm/aerialways.xml">
 	<!ENTITY powerlines SYSTEM "styles-otm/powerlines.xml">
 	<!ENTITY powertowers SYSTEM "styles-otm/powertowers.xml">
+    <!ENTITY text-ridges SYSTEM "styles-otm/text-ridges.xml">
 	<!ENTITY text-cities-lowzoom SYSTEM "styles-otm/text-cities-lowzoom.xml">
 	<!ENTITY text-cities SYSTEM "styles-otm/text-cities.xml">
 	<!ENTITY text-towns SYSTEM "styles-otm/text-towns.xml">
@@ -111,6 +113,7 @@
 	&tunnels-casing;
 	&tunnels-fill;
 	&tunnels-middle;
+	&ridges;
 	&cliffs;
 	&buildings;
 	&areas;
@@ -143,6 +146,7 @@
 	&aerialways;
 	&powerlines;
 	&powertowers;
+	&text-ridges;
 	&text-cities-lowzoom;
 	&text-cities;
 	&text-towns;
@@ -271,6 +275,15 @@
 		</Datasource>
 	</Layer>
 	
+	<Layer name="ridges">
+		<StyleName>ridges</StyleName>
+		<Datasource>
+			<Parameter name="table">(SELECT way,"natural","man_made",highway,barrier,'no' as area FROM planet_osm_line WHERE ("natural" IS NOT NULL) OR ("man_made" IS NOT NULL) OR (highway IS NOT NULL) OR (barrier IS NOT NULL)) AS ridge </Parameter>
+			<Parameter name="dbname">gis</Parameter>
+			&postgis-settings;
+		</Datasource>
+	</Layer>
+
 	<Layer name="cliffs-lines">
 		<StyleName>cliffs</StyleName>
 		<Datasource>
@@ -509,6 +522,16 @@
 		<StyleName>powertowers</StyleName>
 		<Datasource>
 			<Parameter name="table">(SELECT way,power FROM planet_osm_point WHERE power IN ('tower','pole')) AS powertowers </Parameter>
+			<Parameter name="dbname">gis</Parameter>
+			&postgis-settings;
+		</Datasource>
+	</Layer>
+
+	<!-- TODO: filter by ridges -->
+	<Layer name="text-ridges">
+		<StyleName>text-natural-line</StyleName>
+		<Datasource>
+			<Parameter name="table">(SELECT way,name,"natural" FROM planet_osm_line) AS names</Parameter>
 			<Parameter name="dbname">gis</Parameter>
 			&postgis-settings;
 		</Datasource>

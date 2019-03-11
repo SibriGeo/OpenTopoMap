@@ -1,0 +1,15 @@
+<Style name="ridges">
+	<Rule> <!-- Обычные "мелкие" безымянные хребты -->
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>([natural] = 'ridge') and ([name] = null) and ([area] = 'no')</Filter>
+		<LineSymbolizer stroke="#803300" stroke-width="1.0" stroke-linecap="round" smooth="0.5" stroke-opacity="0.9"/>
+	</Rule>
+
+	<Rule> <!-- Крупные хребты, имеющие имя и как правило обозначающие цепь гор -->
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>([natural] = 'ridge') and not ([name] = null) and ([area] = 'no')</Filter>
+		<LineSymbolizer stroke="#803300" stroke-width="2.0" stroke-linecap="round" smooth="0.5" stroke-opacity="0.9"/>
+	</Rule>
+</Style>
