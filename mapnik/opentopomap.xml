@@ -281,7 +281,7 @@
 	<Layer name="ridges">
 		<StyleName>ridges</StyleName>
 		<Datasource>
-			<Parameter name="table">(SELECT way,"natural","man_made",highway,barrier,'no' as area FROM planet_osm_line WHERE ("natural" IS NOT NULL) OR ("man_made" IS NOT NULL) OR (highway IS NOT NULL) OR (barrier IS NOT NULL)) AS ridge </Parameter>
+			<Parameter name="table">(SELECT way,"natural",name,"man_made",highway,barrier,'no' as area FROM planet_osm_line WHERE ("natural" IS NOT NULL) OR ("man_made" IS NOT NULL) OR (highway IS NOT NULL) OR (barrier IS NOT NULL)) AS ridge </Parameter>
 			<Parameter name="dbname">gis</Parameter>
 			&postgis-settings;
 		</Datasource>
