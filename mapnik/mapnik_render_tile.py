@@ -32,16 +32,6 @@ def tile2prjbounds(settings, x, y, z):
 
 
 
-engine = FontEngine.instance()
-
-font_dir = "/usr/share/fonts"
-
-for dirpath, dirnames, filenames in os.walk(font_dir, followlinks=True):
-	for filename in filenames:
-		if filename.endswith(".ttf") or filename.endswith(".otf"):
-			fullpath = os.path.join(dirpath, filename)
-			print "loading font %s", fullpath
-			engine.register_font(fullpath)
 
 m = Map(2*1024,2*1024)
 load_map(m, input_mapnik_style)
