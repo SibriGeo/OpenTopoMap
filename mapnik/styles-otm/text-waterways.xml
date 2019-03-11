@@ -1,4 +1,25 @@
 <Style name="text-waterways">
+
+<!-- 
+minimum-path-length - place labels only on paths longer than this value (px)
+minimum-distance    - Point placement: Minimum distance that a label can be placed from any other label or shield
+                      Line placement: Minimum distance between repeated labels such as street names or shield symbols (works across features) (px)
+spacing             - Space between repeated labels. If spacing is 0 only one label is placed. (px)
+-->
+	<Rule>
+		&maxscale_zoom11;
+		&minscale_zoom11;
+		<Filter>[waterway] = 'river'</Filter>
+		<TextSymbolizer fontset-name="sans-oblique" size="10" fill="#2020ff" spacing="250" minimum-distance="250" minimum-path-length="100" max-char-angle-delta="30" dy="2" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" placement="line">[name]</TextSymbolizer>
+	</Rule>
+	
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom13;
+		<Filter>[waterway] = 'river'</Filter>
+		<TextSymbolizer fontset-name="sans-oblique" size="10" fill="#2020ff" spacing="250" minimum-distance="250" minimum-path-length="100" max-char-angle-delta="30" dy="2" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" placement="line">[name]</TextSymbolizer>
+	</Rule>
+	
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom15;
