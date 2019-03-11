@@ -14,7 +14,7 @@
 
 DBname='gis'
 toolpath='mapnik/tools'
-demfile='mapnik/dem/dem-srtm.tiff'
+demfile='mapnik/dem/raw.tif'
 
 cd ~/OpenTopoMap/
 
