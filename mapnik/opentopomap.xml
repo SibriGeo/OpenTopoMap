@@ -535,7 +535,7 @@
 
 	<!-- TODO: filter by ridges -->
 	<Layer name="text-ridges">
-		<StyleName>text-natural-line</StyleName>
+		<StyleName>text-ridges</StyleName>
 		<Datasource>
 			<Parameter name="table">(SELECT way,name,"natural" FROM planet_osm_line) AS names</Parameter>
 			<Parameter name="dbname">gis</Parameter>
