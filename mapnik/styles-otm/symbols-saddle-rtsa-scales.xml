@@ -1,0 +1,74 @@
+<Style name="symbols-saddle">
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>(([natural] = 'saddle' or [mountain_pass] = 'yes') and [rtsa_scale] = '1A')</Filter>
+		<PointSymbolizer allow-overlap="yes" ignore-placement="yes" file="symbols-otm/rtsa_scales/1A.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>(([natural] = 'saddle' or [mountain_pass] = 'yes') and [rtsa_scale] = '1А')</Filter>
+		<PointSymbolizer allow-overlap="yes" ignore-placement="yes" file="symbols-otm/rtsa_scales/1A.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>(([natural] = 'saddle' or [mountain_pass] = 'yes') and [rtsa_scale] = '1Б')</Filter>
+		<PointSymbolizer allow-overlap="yes" ignore-placement="yes" file="symbols-otm/rtsa_scales/1B.png"/> <!-- transform="scale(1)" -->
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>(([natural] = 'saddle' or [mountain_pass] = 'yes') and [rtsa_scale] = '2А')</Filter>
+		<PointSymbolizer allow-overlap="yes" ignore-placement="yes" file="symbols-otm/rtsa_scales/2A.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>(([natural] = 'saddle' or [mountain_pass] = 'yes') and [rtsa_scale] = '2Б')</Filter>
+		<PointSymbolizer allow-overlap="yes" ignore-placement="yes" file="symbols-otm/rtsa_scales/2B.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>(([natural] = 'saddle' or [mountain_pass] = 'yes') and [rtsa_scale] = '3A')</Filter>
+		<PointSymbolizer allow-overlap="yes" ignore-placement="yes" file="symbols-otm/rtsa_scales/3A.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>(([natural] = 'saddle' or [mountain_pass] = 'yes') and [rtsa_scale] = '3Б')</Filter>
+		<PointSymbolizer allow-overlap="yes" ignore-placement="yes" file="symbols-otm/rtsa_scales/3B.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>(([natural] = 'saddle' or [mountain_pass] = 'yes') and [rtsa_scale] = 'н/к')</Filter>
+		<PointSymbolizer allow-overlap="yes" ignore-placement="yes" file="symbols-otm/rtsa_scales/nograde.png"/>
+	</Rule>
+	<Rule>
+		&maxscale_zoom12;
+		&minscale_zoom17;
+		<Filter>(([natural] = 'saddle' or [mountain_pass] = 'yes') and [rtsa_scale] = null)</Filter>
+		<PointSymbolizer allow-overlap="yes" ignore-placement="yes" file="symbols-otm/rtsa_scales/unknown.png"/>
+	</Rule>
+
+
+<!-- text -->
+
+    <Rule> <!-- 14 уровень только названия -->
+		&maxscale_zoom14;
+		&minscale_zoom14;
+		<Filter>([natural] = 'saddle' or [mountain_pass] = 'yes') and not ([name] = null)</Filter>
+		<TextSymbolizer fontset-name="sans-oblique" size="9" fill="black" margin="1" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" placement="point" dy="10" wrap-width="100">[name]</TextSymbolizer>
+	</Rule>
+
+    <Rule> <!-- 15-17 уровень названия и высота -->
+		&maxscale_zoom15;
+		&minscale_zoom17;
+		<Filter>([natural] = 'saddle' or [mountain_pass] = 'yes') and not ([name] = null)</Filter>
+		<TextSymbolizer fontset-name="sans-oblique" size="9" fill="black" margin="1" halo-radius="2" halo-fill="rgba(255,255,255,0.8)" placement="point" dy="10" wrap-width="100">[name]+"\n"+[ele]</TextSymbolizer>
+	</Rule>
+
+</Style>
