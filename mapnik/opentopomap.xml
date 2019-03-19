@@ -325,12 +325,14 @@
 	<Layer name="contours">
 		<StyleName>contours</StyleName>
 		<Datasource>
-			<!-- если используется другой способ, описанный в HOWTO_DEM.md -->
+			<!-- если используется способ, описанный в HOWTO_DEM.md (phyghtmap + osm2pgsql) -->
+			<!--
             <Parameter name="table">(SELECT way,ele FROM planet_osm_line) AS contours </Parameter>
-            <!-- если используется другой способ TODO: см. opensnowmap tools -->
-            <!--
-            <Parameter name="table">(SELECT way,ele FROM contours) AS contours </Parameter>
         	-->
+            <!-- если используется способ из mapnik/scripts/create_contours.sh (gdal_contour + shp2pgsql) -->
+            
+            <Parameter name="table">(SELECT way,ele FROM contours) AS contours </Parameter>
+        	
 			<Parameter name="dbname">contours</Parameter>
 			&postgis-settings;
 		</Datasource>
